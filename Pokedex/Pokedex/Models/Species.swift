@@ -8,7 +8,10 @@
 import Foundation
 
 // MARK: - Species
-struct Species: Codable {
+struct Species: Codable, Identifiable {
+    var id: String {
+        return name
+    }
     let name: String
     let url: String
 }

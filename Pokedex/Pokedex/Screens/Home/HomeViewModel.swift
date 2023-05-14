@@ -10,13 +10,30 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
 
-    @Published var pokemons: [String] = []
+    private var lastResponse: PokeAPIResponse? = nil
+    private let service = SpeciesService()
+    @Published var pokemons: [Species] = []
+    @Published var error: Error? = nil
 
+    @MainActor
     func fetchPokemons() async {
-        sleep(2)
-        await MainActor.run {
-            pokemons = ["P1","Poke 2", "Pokemon 3", "4"]
+        do {
+            lastResponse = try await service.getSpecies(whenPreviousIs: lastResponse)
+            await MainActor.run {
+                pokemons.append(contentsOf: lastResponse?.results ?? [])
+            }
+        } catch let error {
+            await MainActor.run {
+                self.error = error
+            }
         }
+
     }
 
+    var isFullList: Bool {
+        if lastResponse == nil {
+            return false
+        }
+        return lastResponse?.next == nil
+    }
 }

@@ -13,16 +13,22 @@ struct HomeScreen: View, ViewControllable {
 
     var body: some View {
         List {
-            ForEach(viewModel.pokemons, id: \.self) { pokename in
-                Text(pokename)
+            ForEach(viewModel.pokemons) { pokeSpecies in
+                Text(pokeSpecies.name)
+            }
+
+            if !viewModel.isFullList {
+                ProgressView()
+                    .foregroundColor(.red)
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .onAppear {
+                        Task {
+                            await viewModel.fetchPokemons()
+                        }
+                    }
             }
         }
         .navigationTitle("POKEDEX")
-        .onAppear {
-            Task {
-                await viewModel.fetchPokemons()
-            }
-        }
 
     }
 }

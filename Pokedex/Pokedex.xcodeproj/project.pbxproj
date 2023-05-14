@@ -20,6 +20,7 @@
 		CC15C9022A110571001FBFAF /* EvolutionChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9012A110571001FBFAF /* EvolutionChain.swift */; };
 		CC15C9042A110898001FBFAF /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9032A110898001FBFAF /* Species.swift */; };
 		CC15C9072A110CFD001FBFAF /* SpeciesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9062A110CFD001FBFAF /* SpeciesService.swift */; };
+		CC15C9092A11132F001FBFAF /* PokedexApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9082A11132F001FBFAF /* PokedexApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CC15C9012A110571001FBFAF /* EvolutionChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionChain.swift; sourceTree = "<group>"; };
 		CC15C9032A110898001FBFAF /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		CC15C9062A110CFD001FBFAF /* SpeciesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesService.swift; sourceTree = "<group>"; };
+		CC15C9082A11132F001FBFAF /* PokedexApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		CC15C9052A110CD9001FBFAF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CC15C9082A11132F001FBFAF /* PokedexApi.swift */,
 				CC15C9062A110CFD001FBFAF /* SpeciesService.swift */,
 			);
 			path = Services;
@@ -268,6 +271,7 @@
 				CC15C8FE2A11006C001FBFAF /* PokemonApiResponse.swift in Sources */,
 				CC15C8F72A10FA26001FBFAF /* HomeScreen.swift in Sources */,
 				CC15C8EC2A10F90B001FBFAF /* ViewControllable.swift in Sources */,
+				CC15C9092A11132F001FBFAF /* PokedexApi.swift in Sources */,
 				CC15C8FB2A10FC45001FBFAF /* HomeViewModel.swift in Sources */,
 				CC15C8B92A10F512001FBFAF /* AppDelegate.swift in Sources */,
 				CC15C9042A110898001FBFAF /* Species.swift in Sources */,

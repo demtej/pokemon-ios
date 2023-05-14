@@ -7,17 +7,6 @@
 
 import Foundation
 
-
-final class PokedexApi {
-    static let BASE_URL = "https://pokeapi.co/api/v2/"
-
-    enum ApiError: Error {
-        case malformedUrl
-        case unkwonError
-    }
-}
-
-
 final class SpeciesService {
 
     private static let MAX_RESULTS = 20
@@ -32,7 +21,7 @@ final class SpeciesService {
         }
     }
 
-    func getNextSpecies(of prevResponse: PokeAPIResponse) async throws -> PokeAPIResponse? {
+    private func getNextSpecies(of prevResponse: PokeAPIResponse) async throws -> PokeAPIResponse? {
         guard let urlString = prevResponse.next else {
             return nil
         }
@@ -42,14 +31,14 @@ final class SpeciesService {
         return try await getSpecies(from: url)
     }
 
-    func getFirstSpecies() async throws -> PokeAPIResponse {
+    private func getFirstSpecies() async throws -> PokeAPIResponse {
         guard let url = URL(string: SpeciesService.BASE_URL) else {
             throw PokedexApi.ApiError.malformedUrl
         }
         return try await getSpecies(from: url)
     }
 
-    func getSpecies(from url:URL)  async throws -> PokeAPIResponse {
+    private func getSpecies(from url:URL)  async throws -> PokeAPIResponse {
         let (data, response) = try await URLSession.shared.data(from: url)
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
             throw PokedexApi.ApiError.unkwonError
