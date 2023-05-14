@@ -13,7 +13,7 @@ final class AppCoordinator {
     private let baseNavController = UINavigationController()
 
     func start() -> UIViewController {
-        let homeViewController = HomeScreen().viewController()
+        let homeViewController = HomeScreen(viewModel: HomeViewModel()).viewController()
         baseNavController.pushViewController(homeViewController, animated: false)
         return baseNavController
     }

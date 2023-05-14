@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct HomeScreen: View, ViewControllable {
+
+    @ObservedObject var viewModel: HomeViewModel
+
     var body: some View {
-        VStack {
-            Text("Hello, World!")
-            Text("POKEDEX")
+        List {
+            ForEach(viewModel.pokemons, id: \.self) { pokename in
+                Text(pokename)
+            }
+        }
+        .navigationTitle("POKEDEX")
+        .onAppear {
+            Task {
+                await viewModel.fetchPokemons()
+            }
         }
 
-    }
-}
-
-struct HomeScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeScreen()
     }
 }
