@@ -8,12 +8,25 @@
 import Foundation
 
 
-class HomeViewModel: ObservableObject {
+final class HomeViewModel: ObservableObject {
 
     private var lastResponse: PokeAPIResponse? = nil
     private let service = SpeciesService()
+    private let appCoordinator: AppCoordinator
+
     @Published var pokemons: [Species] = []
     @Published var error: Error? = nil
+
+    var isFullList: Bool {
+        if lastResponse == nil {
+            return false
+        }
+        return lastResponse?.next == nil
+    }
+
+    init(appCoordinator: AppCoordinator) {
+        self.appCoordinator = appCoordinator
+    }
 
     @MainActor
     func fetchPokemons() async {
@@ -27,13 +40,10 @@ class HomeViewModel: ObservableObject {
                 self.error = error
             }
         }
-
     }
 
-    var isFullList: Bool {
-        if lastResponse == nil {
-            return false
-        }
-        return lastResponse?.next == nil
+    func tapSpecies(_ species: Species) {
+        self.appCoordinator.navigate(to: .detail(species: species))
     }
+
 }

@@ -16,8 +16,8 @@ struct HomeScreen: View, ViewControllable {
             ForEach(viewModel.pokemons) { pokeSpecies in
                 HStack {
                     Text(pokeSpecies.name)
-                    Spacer()
-                    Text(pokeSpecies.pokemonId)
+                }.onTapGesture {
+                    viewModel.tapSpecies(pokeSpecies)
                 }
 
             }

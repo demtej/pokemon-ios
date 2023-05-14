@@ -21,6 +21,10 @@
 		CC15C9042A110898001FBFAF /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9032A110898001FBFAF /* Species.swift */; };
 		CC15C9072A110CFD001FBFAF /* SpeciesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9062A110CFD001FBFAF /* SpeciesService.swift */; };
 		CC15C9092A11132F001FBFAF /* PokedexApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9082A11132F001FBFAF /* PokedexApi.swift */; };
+		CC15C9112A1129C9001FBFAF /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9102A1129C9001FBFAF /* DetailScreen.swift */; };
+		CC15C9132A1129D4001FBFAF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9122A1129D4001FBFAF /* DetailViewModel.swift */; };
+		CC15C91A2A112AD7001FBFAF /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9192A112AD7001FBFAF /* RemoteImage.swift */; };
+		CC15C91D2A112E49001FBFAF /* SpeciesAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C91C2A112E49001FBFAF /* SpeciesAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		CC15C9032A110898001FBFAF /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		CC15C9062A110CFD001FBFAF /* SpeciesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesService.swift; sourceTree = "<group>"; };
 		CC15C9082A11132F001FBFAF /* PokedexApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexApi.swift; sourceTree = "<group>"; };
+		CC15C9102A1129C9001FBFAF /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		CC15C9122A1129D4001FBFAF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		CC15C9192A112AD7001FBFAF /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		CC15C91C2A112E49001FBFAF /* SpeciesAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				CC15C8F52A10FA15001FBFAF /* Home */,
+				CC15C90F2A112987001FBFAF /* Detail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -164,6 +173,33 @@
 				CC15C9062A110CFD001FBFAF /* SpeciesService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CC15C90F2A112987001FBFAF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CC15C91B2A112E34001FBFAF /* ModelAdapters */,
+				CC15C9182A112AC8001FBFAF /* Views */,
+				CC15C9102A1129C9001FBFAF /* DetailScreen.swift */,
+				CC15C9122A1129D4001FBFAF /* DetailViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		CC15C9182A112AC8001FBFAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC15C9192A112AD7001FBFAF /* RemoteImage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CC15C91B2A112E34001FBFAF /* ModelAdapters */ = {
+			isa = PBXGroup;
+			children = (
+				CC15C91C2A112E49001FBFAF /* SpeciesAdapter.swift */,
+			);
+			path = ModelAdapters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +310,13 @@
 				CC15C9092A11132F001FBFAF /* PokedexApi.swift in Sources */,
 				CC15C8FB2A10FC45001FBFAF /* HomeViewModel.swift in Sources */,
 				CC15C8B92A10F512001FBFAF /* AppDelegate.swift in Sources */,
+				CC15C9112A1129C9001FBFAF /* DetailScreen.swift in Sources */,
+				CC15C91A2A112AD7001FBFAF /* RemoteImage.swift in Sources */,
+				CC15C9132A1129D4001FBFAF /* DetailViewModel.swift in Sources */,
 				CC15C9042A110898001FBFAF /* Species.swift in Sources */,
 				CC15C9072A110CFD001FBFAF /* SpeciesService.swift in Sources */,
 				CC15C9022A110571001FBFAF /* EvolutionChain.swift in Sources */,
+				CC15C91D2A112E49001FBFAF /* SpeciesAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
