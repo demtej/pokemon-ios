@@ -14,6 +14,7 @@
 		CC15C8D02A10F513001FBFAF /* PokedexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8CF2A10F513001FBFAF /* PokedexTests.swift */; };
 		CC15C8DA2A10F513001FBFAF /* PokedexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8D92A10F513001FBFAF /* PokedexUITests.swift */; };
 		CC15C8DC2A10F513001FBFAF /* PokedexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8DB2A10F513001FBFAF /* PokedexUITestsLaunchTests.swift */; };
+		CC15C8EC2A10F90B001FBFAF /* ViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8EB2A10F90B001FBFAF /* ViewControllable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		CC15C8D52A10F513001FBFAF /* PokedexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC15C8D92A10F513001FBFAF /* PokedexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexUITests.swift; sourceTree = "<group>"; };
 		CC15C8DB2A10F513001FBFAF /* PokedexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CC15C8EB2A10F90B001FBFAF /* ViewControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		CC15C8B72A10F512001FBFAF /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				CC15C8E82A10F8DC001FBFAF /* Architecture */,
 				CC15C8B82A10F512001FBFAF /* AppDelegate.swift */,
 				CC15C8BC2A10F512001FBFAF /* ViewController.swift */,
 				CC15C8C12A10F513001FBFAF /* Assets.xcassets */,
@@ -119,6 +122,22 @@
 				CC15C8DB2A10F513001FBFAF /* PokedexUITestsLaunchTests.swift */,
 			);
 			path = PokedexUITests;
+			sourceTree = "<group>";
+		};
+		CC15C8E82A10F8DC001FBFAF /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				CC15C8EA2A10F8F5001FBFAF /* UIKit + SwiftUI */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		CC15C8EA2A10F8F5001FBFAF /* UIKit + SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				CC15C8EB2A10F90B001FBFAF /* ViewControllable.swift */,
+			);
+			path = "UIKit + SwiftUI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC15C8BD2A10F512001FBFAF /* ViewController.swift in Sources */,
+				CC15C8EC2A10F90B001FBFAF /* ViewControllable.swift in Sources */,
 				CC15C8B92A10F512001FBFAF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
