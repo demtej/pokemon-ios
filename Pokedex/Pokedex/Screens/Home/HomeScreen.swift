@@ -14,7 +14,12 @@ struct HomeScreen: View, ViewControllable {
     var body: some View {
         List {
             ForEach(viewModel.pokemons) { pokeSpecies in
-                Text(pokeSpecies.name)
+                HStack {
+                    Text(pokeSpecies.name)
+                    Spacer()
+                    Text(pokeSpecies.pokemonId)
+                }
+
             }
 
             if !viewModel.isFullList {

@@ -14,4 +14,15 @@ struct Species: Codable, Identifiable {
     }
     let name: String
     let url: String
+
+    var pokemonId: String {
+        if let url = URL(string: url) {
+            let lastPathComponent = url.lastPathComponent
+            return lastPathComponent
+        }
+
+        return ""
+    }
 }
+
+
