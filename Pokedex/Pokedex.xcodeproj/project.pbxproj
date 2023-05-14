@@ -19,6 +19,7 @@
 		CC15C9002A11024C001FBFAF /* PokemonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8FF2A11024C001FBFAF /* PokemonApi.swift */; };
 		CC15C9022A110571001FBFAF /* EvolutionChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9012A110571001FBFAF /* EvolutionChain.swift */; };
 		CC15C9042A110898001FBFAF /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9032A110898001FBFAF /* Species.swift */; };
+		CC15C9072A110CFD001FBFAF /* SpeciesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9062A110CFD001FBFAF /* SpeciesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CC15C8FF2A11024C001FBFAF /* PokemonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonApi.swift; sourceTree = "<group>"; };
 		CC15C9012A110571001FBFAF /* EvolutionChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionChain.swift; sourceTree = "<group>"; };
 		CC15C9032A110898001FBFAF /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		CC15C9062A110CFD001FBFAF /* SpeciesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		CC15C8B72A10F512001FBFAF /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				CC15C9052A110CD9001FBFAF /* Services */,
 				CC15C8FC2A10FFFD001FBFAF /* Models */,
 				CC15C8F42A10FA0B001FBFAF /* Screens */,
 				CC15C8E82A10F8DC001FBFAF /* Architecture */,
@@ -150,6 +153,14 @@
 				CC15C9032A110898001FBFAF /* Species.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CC15C9052A110CD9001FBFAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CC15C9062A110CFD001FBFAF /* SpeciesService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 				CC15C8FB2A10FC45001FBFAF /* HomeViewModel.swift in Sources */,
 				CC15C8B92A10F512001FBFAF /* AppDelegate.swift in Sources */,
 				CC15C9042A110898001FBFAF /* Species.swift in Sources */,
+				CC15C9072A110CFD001FBFAF /* SpeciesService.swift in Sources */,
 				CC15C9022A110571001FBFAF /* EvolutionChain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
