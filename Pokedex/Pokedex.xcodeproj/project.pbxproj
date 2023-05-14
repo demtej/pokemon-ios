@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CC15C8B92A10F512001FBFAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8B82A10F512001FBFAF /* AppDelegate.swift */; };
-		CC15C8BD2A10F512001FBFAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8BC2A10F512001FBFAF /* ViewController.swift */; };
 		CC15C8C22A10F513001FBFAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC15C8C12A10F513001FBFAF /* Assets.xcassets */; };
 		CC15C8C52A10F513001FBFAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC15C8C32A10F513001FBFAF /* LaunchScreen.storyboard */; };
 		CC15C8D02A10F513001FBFAF /* PokedexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8CF2A10F513001FBFAF /* PokedexTests.swift */; };
 		CC15C8DA2A10F513001FBFAF /* PokedexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8D92A10F513001FBFAF /* PokedexUITests.swift */; };
 		CC15C8DC2A10F513001FBFAF /* PokedexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8DB2A10F513001FBFAF /* PokedexUITestsLaunchTests.swift */; };
 		CC15C8EC2A10F90B001FBFAF /* ViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8EB2A10F90B001FBFAF /* ViewControllable.swift */; };
+		CC15C8F72A10FA26001FBFAF /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8F62A10FA26001FBFAF /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		CC15C8B52A10F512001FBFAF /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC15C8B82A10F512001FBFAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC15C8BC2A10F512001FBFAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC15C8C12A10F513001FBFAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC15C8C42A10F513001FBFAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC15C8C62A10F513001FBFAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		CC15C8D92A10F513001FBFAF /* PokedexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexUITests.swift; sourceTree = "<group>"; };
 		CC15C8DB2A10F513001FBFAF /* PokedexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC15C8EB2A10F90B001FBFAF /* ViewControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllable.swift; sourceTree = "<group>"; };
+		CC15C8F62A10FA26001FBFAF /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +97,9 @@
 		CC15C8B72A10F512001FBFAF /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				CC15C8F42A10FA0B001FBFAF /* Screens */,
 				CC15C8E82A10F8DC001FBFAF /* Architecture */,
 				CC15C8B82A10F512001FBFAF /* AppDelegate.swift */,
-				CC15C8BC2A10F512001FBFAF /* ViewController.swift */,
 				CC15C8C12A10F513001FBFAF /* Assets.xcassets */,
 				CC15C8C32A10F513001FBFAF /* LaunchScreen.storyboard */,
 				CC15C8C62A10F513001FBFAF /* Info.plist */,
@@ -138,6 +138,22 @@
 				CC15C8EB2A10F90B001FBFAF /* ViewControllable.swift */,
 			);
 			path = "UIKit + SwiftUI";
+			sourceTree = "<group>";
+		};
+		CC15C8F42A10FA0B001FBFAF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CC15C8F52A10FA15001FBFAF /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CC15C8F52A10FA15001FBFAF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CC15C8F62A10FA26001FBFAF /* HomeScreen.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC15C8BD2A10F512001FBFAF /* ViewController.swift in Sources */,
+				CC15C8F72A10FA26001FBFAF /* HomeScreen.swift in Sources */,
 				CC15C8EC2A10F90B001FBFAF /* ViewControllable.swift in Sources */,
 				CC15C8B92A10F512001FBFAF /* AppDelegate.swift in Sources */,
 			);
