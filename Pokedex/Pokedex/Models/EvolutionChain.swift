@@ -15,8 +15,9 @@ struct EvolutionChain: Codable {
 
 // MARK: - Chain
 struct Chain: Codable {
-    let evolvesTo: [Chain]
+    
     let species: Species
+    let evolvesTo: [Chain]
 
     enum CodingKeys: String, CodingKey {
         case evolvesTo = "evolves_to"

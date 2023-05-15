@@ -10,9 +10,9 @@ import Foundation
 final class DetailViewModel: ObservableObject {
 
     private let appCoordinator: AppCoordinator
+    private let chainService: ChainService
+
     @Published var species: SpeciesAdapter
-    private let chainService = ChainService()
-    
     @Published var chain: Chain? = nil
     @Published var error: Error? = nil
 
@@ -34,9 +34,10 @@ final class DetailViewModel: ObservableObject {
         species.imageUrlString
     }
 
-    init(species: Species,appCoordinator: AppCoordinator ) {
+    init(species: Species,appCoordinator: AppCoordinator, chainService: ChainService = ChainService()) {
         self.species = SpeciesAdapter(species: species)
         self.appCoordinator = appCoordinator
+        self.chainService = chainService
     }
 
 

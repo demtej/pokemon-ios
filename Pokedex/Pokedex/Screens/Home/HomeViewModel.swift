@@ -11,7 +11,7 @@ import Foundation
 final class HomeViewModel: ObservableObject {
 
     private var lastResponse: PokeAPIResponse? = nil
-    private let service = SpeciesService()
+    private let service: SpeciesService
     private let appCoordinator: AppCoordinator
 
     @Published var pokemons: [Species] = []
@@ -28,8 +28,9 @@ final class HomeViewModel: ObservableObject {
         return lastResponse?.next == nil
     }
 
-    init(appCoordinator: AppCoordinator) {
+    init(appCoordinator: AppCoordinator, service: SpeciesService = SpeciesService()) {
         self.appCoordinator = appCoordinator
+        self.service = service
     }
 
     @MainActor

@@ -10,7 +10,6 @@
 		CC15C8B92A10F512001FBFAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8B82A10F512001FBFAF /* AppDelegate.swift */; };
 		CC15C8C22A10F513001FBFAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC15C8C12A10F513001FBFAF /* Assets.xcassets */; };
 		CC15C8C52A10F513001FBFAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC15C8C32A10F513001FBFAF /* LaunchScreen.storyboard */; };
-		CC15C8D02A10F513001FBFAF /* PokedexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8CF2A10F513001FBFAF /* PokedexTests.swift */; };
 		CC15C8EC2A10F90B001FBFAF /* ViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8EB2A10F90B001FBFAF /* ViewControllable.swift */; };
 		CC15C8F72A10FA26001FBFAF /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8F62A10FA26001FBFAF /* HomeScreen.swift */; };
 		CC15C8F92A10FAE5001FBFAF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C8F82A10FAE5001FBFAF /* AppCoordinator.swift */; };
@@ -29,6 +28,8 @@
 		CC15C9222A1255EE001FBFAF /* String+Linter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9212A1255EE001FBFAF /* String+Linter.swift */; };
 		CC15C9242A12752E001FBFAF /* ChainItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9232A12752E001FBFAF /* ChainItemView.swift */; };
 		CC15C9272A129D62001FBFAF /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9262A129D62001FBFAF /* ErrorView.swift */; };
+		CC15C92C2A12BFC7001FBFAF /* StringHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C92B2A12BFC7001FBFAF /* StringHelperTest.swift */; };
+		CC15C92E2A12C190001FBFAF /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C92D2A12C190001FBFAF /* DetailViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,6 @@
 		CC15C8C42A10F513001FBFAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC15C8C62A10F513001FBFAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC15C8CB2A10F513001FBFAF /* PokedexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC15C8CF2A10F513001FBFAF /* PokedexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexTests.swift; sourceTree = "<group>"; };
 		CC15C8EB2A10F90B001FBFAF /* ViewControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllable.swift; sourceTree = "<group>"; };
 		CC15C8F62A10FA26001FBFAF /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		CC15C8F82A10FAE5001FBFAF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -67,6 +67,8 @@
 		CC15C9212A1255EE001FBFAF /* String+Linter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Linter.swift"; sourceTree = "<group>"; };
 		CC15C9232A12752E001FBFAF /* ChainItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainItemView.swift; sourceTree = "<group>"; };
 		CC15C9262A129D62001FBFAF /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		CC15C92B2A12BFC7001FBFAF /* StringHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelperTest.swift; sourceTree = "<group>"; };
+		CC15C92D2A12C190001FBFAF /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +126,8 @@
 		CC15C8CE2A10F513001FBFAF /* PokedexTests */ = {
 			isa = PBXGroup;
 			children = (
-				CC15C8CF2A10F513001FBFAF /* PokedexTests.swift */,
+				CC15C92B2A12BFC7001FBFAF /* StringHelperTest.swift */,
+				CC15C92D2A12C190001FBFAF /* DetailViewModelTests.swift */,
 			);
 			path = PokedexTests;
 			sourceTree = "<group>";
@@ -356,7 +359,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC15C8D02A10F513001FBFAF /* PokedexTests.swift in Sources */,
+				CC15C92C2A12BFC7001FBFAF /* StringHelperTest.swift in Sources */,
+				CC15C92E2A12C190001FBFAF /* DetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
