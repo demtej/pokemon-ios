@@ -112,8 +112,8 @@
 			children = (
 				CC15C9052A110CD9001FBFAF /* Services */,
 				CC15C8FC2A10FFFD001FBFAF /* Models */,
-				CC15C8F42A10FA0B001FBFAF /* Screens */,
-				CC15C8E82A10F8DC001FBFAF /* Architecture */,
+				CC15C8F42A10FA0B001FBFAF /* Screens & Views */,
+				CC15C8E82A10F8DC001FBFAF /* Architecture & Helpers */,
 				CC15C8C12A10F513001FBFAF /* Assets.xcassets */,
 				CC15C8C32A10F513001FBFAF /* LaunchScreen.storyboard */,
 				CC15C8C62A10F513001FBFAF /* Info.plist */,
@@ -132,13 +132,13 @@
 			path = PokedexTests;
 			sourceTree = "<group>";
 		};
-		CC15C8E82A10F8DC001FBFAF /* Architecture */ = {
+		CC15C8E82A10F8DC001FBFAF /* Architecture & Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				CC15C9202A1255DE001FBFAF /* Helpers */,
 				CC15C8EA2A10F8F5001FBFAF /* UIKit + SwiftUI */,
 			);
-			path = Architecture;
+			path = "Architecture & Helpers";
 			sourceTree = "<group>";
 		};
 		CC15C8EA2A10F8F5001FBFAF /* UIKit + SwiftUI */ = {
@@ -149,14 +149,14 @@
 			path = "UIKit + SwiftUI";
 			sourceTree = "<group>";
 		};
-		CC15C8F42A10FA0B001FBFAF /* Screens */ = {
+		CC15C8F42A10FA0B001FBFAF /* Screens & Views */ = {
 			isa = PBXGroup;
 			children = (
 				CC15C9252A129D50001FBFAF /* Common Views */,
 				CC15C8F52A10FA15001FBFAF /* Home */,
 				CC15C90F2A112987001FBFAF /* Detail */,
 			);
-			path = Screens;
+			path = "Screens & Views";
 			sourceTree = "<group>";
 		};
 		CC15C8F52A10FA15001FBFAF /* Home */ = {
