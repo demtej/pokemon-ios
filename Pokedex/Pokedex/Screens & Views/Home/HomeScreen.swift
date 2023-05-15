@@ -22,8 +22,6 @@ struct HomeScreen: View, ViewControllable {
                         viewModel.tapSpecies(pokeSpecies)
                     }.listRowBackground(Color.lightBackground)
                 }
-
-
                 if let error = viewModel.error {
                     ErrorView(error: error, retryAction: {
                         Task {

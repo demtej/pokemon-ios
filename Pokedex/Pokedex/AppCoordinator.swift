@@ -19,11 +19,13 @@ final class AppCoordinator {
         return baseNavController
     }
 
+    // MARK: Screens
     enum Screen {
         case home
         case detail(species: Species)
     }
 
+    // MARK: Navigation
     func navigate(to screen: Screen, animated: Bool = true) {
         switch screen {
         case .home:

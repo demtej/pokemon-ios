@@ -71,6 +71,6 @@ struct DetailScreen: View, ViewControllable {
         }
         .padding()
         .background(Color.pokeGrayLight)
-        .cornerRadius(10)
+        .cornerRadius(CGFloat.defaultRadius)
     }
 }

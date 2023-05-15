@@ -9,17 +9,29 @@ import Foundation
 
 final class DetailViewModel: ObservableObject {
 
+    // MARK: Private Properties
     private let appCoordinator: AppCoordinator
     private let chainService: ChainService
 
+    // MARK: Published Properties
     @Published var species: SpeciesAdapter
     @Published var chain: Chain? = nil
     @Published var error: Error? = nil
 
+    // MARK: Texts
     struct Texts {
         static let evolutionChainTitle = "Evolution Chain"
     }
 
+    // MARK: Init
+    init(species: Species,appCoordinator: AppCoordinator, chainService: ChainService = ChainService()) {
+        self.species = SpeciesAdapter(species: species)
+        self.appCoordinator = appCoordinator
+        self.chainService = chainService
+    }
+
+
+    // MARK: Public Properties & Methods
     var speciesInChain : [SpeciesAdapter] {
         var speciesAdapters = [SpeciesAdapter]()
         var chain = chain
@@ -33,13 +45,6 @@ final class DetailViewModel: ObservableObject {
     var imageUrl: String {
         species.imageUrlString
     }
-
-    init(species: Species,appCoordinator: AppCoordinator, chainService: ChainService = ChainService()) {
-        self.species = SpeciesAdapter(species: species)
-        self.appCoordinator = appCoordinator
-        self.chainService = chainService
-    }
-
 
     @MainActor
     func fetchEvolutionChain() async {

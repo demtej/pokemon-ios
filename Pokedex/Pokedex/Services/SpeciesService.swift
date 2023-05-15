@@ -13,6 +13,8 @@ final class SpeciesService {
     private static let URI = "pokemon-species?limit={max_result}"
     private static let BASE_URL = "\(PokedexApi.BASE_URL)/\(URI.replacingOccurrences(of: "{max_result}", with: "\(MAX_RESULTS)"))"
 
+
+    // MARK: Public Functions
     func getSpecies(whenPreviousIs prevResponse: PokeAPIResponse? = nil) async throws -> PokeAPIResponse? {
         if let prevResponse = prevResponse {
             return try await getNextSpecies(of: prevResponse)
@@ -21,6 +23,7 @@ final class SpeciesService {
         }
     }
 
+    // MARK: Private Functions
     private func getNextSpecies(of prevResponse: PokeAPIResponse) async throws -> PokeAPIResponse? {
         guard let urlString = prevResponse.next else {
             return nil

@@ -11,18 +11,19 @@ struct ChainItemView: View {
 
     let species: SpeciesAdapter
     var highlighted: Bool = false
+    let IMAGE_SIZE : CGFloat = 80
 
     var body: some View {
         VStack {
             RemoteImageView(imageUrl: species.imageUrlString)
-                .frame(width: 80, height: 80)
+                .frame(width: IMAGE_SIZE, height: IMAGE_SIZE)
                 .fixedSize()
                 .background(highlighted ? Color.highlightedColor : Color.pokeGrayLight)
-                .cornerRadius(10)
+                .cornerRadius(CGFloat.defaultRadius)
             Text(species.name.capitalizedFirstLetter())
         }
         .padding()
         .background(highlighted ? Color.lightHighlightedColor : Color.pokeGrayUltralight )
-        .cornerRadius(10)
+        .cornerRadius(CGFloat.defaultRadius)
     }
 }

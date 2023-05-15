@@ -10,6 +10,7 @@ import Foundation
 
 final class ChainService {
 
+    // MARK: Public Functions
     func getEvolutionChain(species: Species) async throws -> EvolutionChain {
         let chainUrl = try await getChainUrl(species: species)
         guard let url = URL(string: chainUrl) else {
@@ -23,6 +24,7 @@ final class ChainService {
         return chain
     }
 
+    // MARK: Private Functions
     private func getChainUrl(species: Species) async throws -> String {
         guard let url = URL(string: species.url) else {
             throw PokedexApi.ApiError.malformedUrl

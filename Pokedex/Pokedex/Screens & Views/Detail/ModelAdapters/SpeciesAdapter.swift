@@ -8,22 +8,13 @@
 import Foundation
 
 struct SpeciesAdapter: Identifiable {
-
+ 
     private let IMAGE_BASE_URL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{species_id}.png"
 
-    let species: Species
-
-    var name: String {
-        species.name
-    }
-    
-    var url: String {
-        species.url
-    }
-
-    var id: String {
-        species.id
-    }
+    let species: Species /// Original instance
+    var name: String { species.name }
+    var url: String { species.url }
+    var id: String { species.id }
 
     private var pokemonId: String {
         if let url = URL(string: url) {
@@ -43,8 +34,8 @@ struct SpeciesAdapter: Identifiable {
 }
 
 
-extension SpeciesAdapter : Equatable{
-
+// MARK: Equatable
+extension SpeciesAdapter : Equatable {
     static func == (lhs: SpeciesAdapter, rhs: SpeciesAdapter) -> Bool {
         lhs.id == rhs.id
     }

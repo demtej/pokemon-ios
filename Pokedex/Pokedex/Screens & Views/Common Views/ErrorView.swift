@@ -24,7 +24,7 @@ struct ErrorView: View {
                     .padding()
                     .background(Color.accentColor)
                     .foregroundColor(.white)
-                    .cornerRadius(10)
+                    .cornerRadius(CGFloat.defaultRadius)
             }
         }
     }
