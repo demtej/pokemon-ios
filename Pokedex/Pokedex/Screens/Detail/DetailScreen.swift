@@ -28,11 +28,12 @@ struct DetailScreen: View, ViewControllable {
                 }
                 .padding()
                 .background(Color.purple)
+                Spacer()
                 VStack {
                     Text(Texts.evolutionChainTitle)
                         .font(.title2)
                         .fontWeight(.bold)
-                    HStack {
+                    VStack {
                         ForEach(viewModel.speciesInChain) { species in
                             ChainItemView(species: species, highlighted: species == viewModel.species)
                                 .scaleEffect(species == viewModel.species ? 1 : 0.8)
@@ -52,7 +53,6 @@ struct DetailScreen: View, ViewControllable {
                 Spacer()
             }
             .background(Color.purple.opacity(0.2))
-//            .navigationTitle(viewModel.species.name.capitalizedFirstLetter())
         }
         .onAppear {
             Task {
