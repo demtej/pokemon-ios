@@ -31,6 +31,7 @@ final class AppCoordinator {
         case .detail(let species):
             let viewModel = DetailViewModel(species: species, appCoordinator: self)
             let viewController = DetailScreen(viewModel: viewModel).viewController()
+            viewController.navigationItem.backButtonTitle = ""
             baseNavController.pushViewController(viewController, animated: animated)
         }
     }

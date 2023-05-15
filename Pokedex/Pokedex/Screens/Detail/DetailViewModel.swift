@@ -10,11 +10,15 @@ import Foundation
 final class DetailViewModel: ObservableObject {
 
     private let appCoordinator: AppCoordinator
-    let species: SpeciesAdapter
+    @Published var species: SpeciesAdapter
     private let chainService = ChainService()
     
     @Published var chain: Chain? = nil
     @Published var error: Error? = nil
+
+    struct Texts {
+        static let evolutionChainTitle = "Evolution Chain"
+    }
 
     var speciesInChain : [SpeciesAdapter] {
         var speciesAdapters = [SpeciesAdapter]()
@@ -48,7 +52,13 @@ final class DetailViewModel: ObservableObject {
                 self.error = error
             }
         }
+    }
 
+    func tapSpecies(_ species: Species) {
+        self.species = SpeciesAdapter(species: species)
+        Task {
+            await fetchEvolutionChain()
+        }
     }
 
 }

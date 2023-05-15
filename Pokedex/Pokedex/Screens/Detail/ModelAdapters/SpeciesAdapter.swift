@@ -41,3 +41,12 @@ struct SpeciesAdapter: Identifiable {
         self.species = species
     }
 }
+
+
+extension SpeciesAdapter : Equatable{
+
+    static func == (lhs: SpeciesAdapter, rhs: SpeciesAdapter) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+}

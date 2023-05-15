@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeScreen: View, ViewControllable {
 
     @ObservedObject var viewModel: HomeViewModel
+    typealias Texts = HomeViewModel.Texts
 
     var body: some View {
         NavigationView {
@@ -38,7 +39,7 @@ struct HomeScreen: View, ViewControllable {
                 }
             }
             .padding(.bottom)
-            .navigationTitle("POKEDEX")
+            .navigationTitle(Texts.title)
         }
     }
 }

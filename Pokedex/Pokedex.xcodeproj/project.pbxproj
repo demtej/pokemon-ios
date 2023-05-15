@@ -27,6 +27,7 @@
 		CC15C91D2A112E49001FBFAF /* SpeciesAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C91C2A112E49001FBFAF /* SpeciesAdapter.swift */; };
 		CC15C91F2A1183C6001FBFAF /* ChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C91E2A1183C6001FBFAF /* ChainService.swift */; };
 		CC15C9222A1255EE001FBFAF /* String+Linter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9212A1255EE001FBFAF /* String+Linter.swift */; };
+		CC15C9242A12752E001FBFAF /* ChainItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9232A12752E001FBFAF /* ChainItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		CC15C91C2A112E49001FBFAF /* SpeciesAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesAdapter.swift; sourceTree = "<group>"; };
 		CC15C91E2A1183C6001FBFAF /* ChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainService.swift; sourceTree = "<group>"; };
 		CC15C9212A1255EE001FBFAF /* String+Linter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Linter.swift"; sourceTree = "<group>"; };
+		CC15C9232A12752E001FBFAF /* ChainItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				CC15C9192A112AD7001FBFAF /* RemoteImage.swift */,
+				CC15C9232A12752E001FBFAF /* ChainItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				CC15C8FE2A11006C001FBFAF /* PokemonApiResponse.swift in Sources */,
 				CC15C8F72A10FA26001FBFAF /* HomeScreen.swift in Sources */,
 				CC15C8EC2A10F90B001FBFAF /* ViewControllable.swift in Sources */,
+				CC15C9242A12752E001FBFAF /* ChainItemView.swift in Sources */,
 				CC15C9092A11132F001FBFAF /* PokedexApi.swift in Sources */,
 				CC15C8FB2A10FC45001FBFAF /* HomeViewModel.swift in Sources */,
 				CC15C8B92A10F512001FBFAF /* AppDelegate.swift in Sources */,

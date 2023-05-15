@@ -10,21 +10,38 @@ import SwiftUI
 struct DetailScreen: View, ViewControllable {
 
     @ObservedObject var viewModel: DetailViewModel
+    typealias Texts = DetailViewModel.Texts
+    let IMAGE_SIZE : CGFloat = 100
 
     var body: some View {
         NavigationView {
             VStack {
-                RemoteImageView(imageUrl: viewModel.imageUrl)
-                    .frame(width: 100, height: 100)
-                    .fixedSize()
+                HStack {
+                    RemoteImageView(imageUrl: viewModel.imageUrl)
+                        .frame(width: IMAGE_SIZE, height: IMAGE_SIZE)
+                        .fixedSize()
+                    Text(viewModel.species.name.capitalizedFirstLetter())
+                        .font(.title)
+                    Spacer()
+                }
+                .padding()
                 Spacer()
+                Text(Texts.evolutionChainTitle)
+                    .font(.title2)
                 HStack {
                     ForEach(viewModel.speciesInChain) { species in
-                        RemoteImageView(imageUrl: species.imageUrlString)
-                            .frame(width: 100, height: 100)
-                            .fixedSize()
+                        ChainItemView(species: species, highlighted: species == viewModel.species)
+                            .scaleEffect(species == viewModel.species ? 1 : 0.8)
+                            .onTapGesture {
+                                if species != viewModel.species {
+                                    withAnimation {
+                                        viewModel.tapSpecies(species.species)
+                                    }
+                                }
+                            }
                     }
                 }
+                Spacer()
             }
             .navigationTitle(viewModel.species.name.capitalizedFirstLetter())
         }
@@ -33,6 +50,5 @@ struct DetailScreen: View, ViewControllable {
                 await viewModel.fetchEvolutionChain()
             }
         }
-
     }
 }

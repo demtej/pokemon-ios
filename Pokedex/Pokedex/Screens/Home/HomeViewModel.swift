@@ -17,6 +17,10 @@ final class HomeViewModel: ObservableObject {
     @Published var pokemons: [Species] = []
     @Published var error: Error? = nil
 
+    struct Texts {
+        static let title = "POKEDEX"
+    }
+    
     var isFullList: Bool {
         if lastResponse == nil {
             return false
