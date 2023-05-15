@@ -35,6 +35,7 @@ final class HomeViewModel: ObservableObject {
     @MainActor
     func fetchPokemons() async {
         do {
+            self.error = nil
             lastResponse = try await service.getSpecies(whenPreviousIs: lastResponse)
             await MainActor.run {
                 pokemons.append(contentsOf: lastResponse?.results ?? [])

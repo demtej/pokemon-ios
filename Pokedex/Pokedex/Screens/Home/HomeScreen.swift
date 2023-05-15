@@ -23,21 +23,31 @@ struct HomeScreen: View, ViewControllable {
                     }.listRowBackground(Color.purple.opacity(0.2))
                 }
 
-                if !viewModel.isFullList {
-                    Section {
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle())
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .listRowInsets(EdgeInsets())
-                            .background(Color.clear)
-                            .onAppear {
-                                Task {
-                                    await viewModel.fetchPokemons()
+
+                if let error = viewModel.error {
+                    ErrorView(error: error, retryAction: {
+                        Task {
+                            await viewModel.fetchPokemons()
+                        }
+                    })
+                } else {
+                    if !viewModel.isFullList {
+                        Section {
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle())
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .listRowInsets(EdgeInsets())
+                                .background(Color.clear)
+                                .onAppear {
+                                    Task {
+                                        await viewModel.fetchPokemons()
+                                    }
                                 }
-                            }
-                            .listRowBackground(Color.purple.opacity(0.2))
+                                .listRowBackground(Color.purple.opacity(0.2))
+                        }
                     }
                 }
+
             }
             .padding(.bottom)
             .navigationTitle(Texts.title)

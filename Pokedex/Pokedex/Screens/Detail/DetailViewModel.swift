@@ -43,6 +43,7 @@ final class DetailViewModel: ObservableObject {
     @MainActor
     func fetchEvolutionChain() async {
         do {
+            self.error = nil
             let chain = try await chainService.getEvolutionChain(species: self.species.species)
             await MainActor.run {
                 self.chain = chain.chain

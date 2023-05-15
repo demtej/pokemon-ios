@@ -29,27 +29,16 @@ struct DetailScreen: View, ViewControllable {
                 .padding()
                 .background(Color.purple)
                 Spacer()
-                VStack {
-                    Text(Texts.evolutionChainTitle)
-                        .font(.title2)
-                        .fontWeight(.bold)
-                    VStack {
-                        ForEach(viewModel.speciesInChain) { species in
-                            ChainItemView(species: species, highlighted: species == viewModel.species)
-                                .scaleEffect(species == viewModel.species ? 1 : 0.8)
-                                .onTapGesture {
-                                    if species != viewModel.species {
-                                        withAnimation {
-                                            viewModel.tapSpecies(species.species)
-                                        }
-                                    }
-                                }
+
+                if let error = viewModel.error {
+                    ErrorView(error: error, retryAction: {
+                        Task {
+                            await viewModel.fetchEvolutionChain()
                         }
-                    }
+                    })
+                } else {
+                    mainView
                 }
-                .padding()
-                .background(Color.gray.opacity(0.4))
-                .cornerRadius(10)
                 Spacer()
             }
             .background(Color.purple.opacity(0.2))
@@ -59,5 +48,29 @@ struct DetailScreen: View, ViewControllable {
                 await viewModel.fetchEvolutionChain()
             }
         }
+    }
+
+    private var mainView : some View {
+        VStack {
+            Text(Texts.evolutionChainTitle)
+                .font(.title2)
+                .fontWeight(.bold)
+            VStack {
+                ForEach(viewModel.speciesInChain) { species in
+                    ChainItemView(species: species, highlighted: species == viewModel.species)
+                        .scaleEffect(species == viewModel.species ? 1 : 0.8)
+                        .onTapGesture {
+                            if species != viewModel.species {
+                                withAnimation {
+                                    viewModel.tapSpecies(species.species)
+                                }
+                            }
+                        }
+                }
+            }
+        }
+        .padding()
+        .background(Color.gray.opacity(0.4))
+        .cornerRadius(10)
     }
 }
