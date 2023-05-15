@@ -22,28 +22,37 @@ struct DetailScreen: View, ViewControllable {
                         .fixedSize()
                     Text(viewModel.species.name.capitalizedFirstLetter())
                         .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
                     Spacer()
                 }
                 .padding()
-                Spacer()
-                Text(Texts.evolutionChainTitle)
-                    .font(.title2)
-                HStack {
-                    ForEach(viewModel.speciesInChain) { species in
-                        ChainItemView(species: species, highlighted: species == viewModel.species)
-                            .scaleEffect(species == viewModel.species ? 1 : 0.8)
-                            .onTapGesture {
-                                if species != viewModel.species {
-                                    withAnimation {
-                                        viewModel.tapSpecies(species.species)
+                .background(Color.purple)
+                VStack {
+                    Text(Texts.evolutionChainTitle)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    HStack {
+                        ForEach(viewModel.speciesInChain) { species in
+                            ChainItemView(species: species, highlighted: species == viewModel.species)
+                                .scaleEffect(species == viewModel.species ? 1 : 0.8)
+                                .onTapGesture {
+                                    if species != viewModel.species {
+                                        withAnimation {
+                                            viewModel.tapSpecies(species.species)
+                                        }
                                     }
                                 }
-                            }
+                        }
                     }
                 }
+                .padding()
+                .background(Color.gray.opacity(0.4))
+                .cornerRadius(10)
                 Spacer()
             }
-            .navigationTitle(viewModel.species.name.capitalizedFirstLetter())
+            .background(Color.purple.opacity(0.2))
+//            .navigationTitle(viewModel.species.name.capitalizedFirstLetter())
         }
         .onAppear {
             Task {

@@ -20,7 +20,7 @@ struct HomeScreen: View, ViewControllable {
                         Text(pokeSpecies.name.capitalizedFirstLetter())
                     }.onTapGesture {
                         viewModel.tapSpecies(pokeSpecies)
-                    }
+                    }.listRowBackground(Color.purple.opacity(0.2))
                 }
 
                 if !viewModel.isFullList {
@@ -35,11 +35,13 @@ struct HomeScreen: View, ViewControllable {
                                     await viewModel.fetchPokemons()
                                 }
                             }
+                            .listRowBackground(Color.purple.opacity(0.2))
                     }
                 }
             }
             .padding(.bottom)
             .navigationTitle(Texts.title)
         }
+        .listStyle(InsetGroupedListStyle())
     }
 }
