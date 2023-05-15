@@ -41,7 +41,7 @@ struct DetailScreen: View, ViewControllable {
                 }
                 Spacer()
             }
-            .background(Color.purple.opacity(0.2))
+            .background(Color.ultraLightBackground)
         }
         .onAppear {
             Task {
@@ -70,7 +70,7 @@ struct DetailScreen: View, ViewControllable {
             }
         }
         .padding()
-        .background(Color.gray.opacity(0.4))
+        .background(Color.pokeGrayLight)
         .cornerRadius(10)
     }
 }

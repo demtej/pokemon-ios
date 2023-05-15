@@ -30,6 +30,7 @@
 		CC15C9272A129D62001FBFAF /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9262A129D62001FBFAF /* ErrorView.swift */; };
 		CC15C92C2A12BFC7001FBFAF /* StringHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C92B2A12BFC7001FBFAF /* StringHelperTest.swift */; };
 		CC15C92E2A12C190001FBFAF /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C92D2A12C190001FBFAF /* DetailViewModelTests.swift */; };
+		CC15C9312A12C688001FBFAF /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9302A12C688001FBFAF /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		CC15C9262A129D62001FBFAF /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		CC15C92B2A12BFC7001FBFAF /* StringHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelperTest.swift; sourceTree = "<group>"; };
 		CC15C92D2A12C190001FBFAF /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
+		CC15C9302A12C688001FBFAF /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		CC15C8E82A10F8DC001FBFAF /* Architecture & Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CC15C92F2A12C67C001FBFAF /* Theme */,
 				CC15C9202A1255DE001FBFAF /* Helpers */,
 				CC15C8EA2A10F8F5001FBFAF /* UIKit + SwiftUI */,
 			);
@@ -231,6 +234,14 @@
 				CC15C9262A129D62001FBFAF /* ErrorView.swift */,
 			);
 			path = "Common Views";
+			sourceTree = "<group>";
+		};
+		CC15C92F2A12C67C001FBFAF /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				CC15C9302A12C688001FBFAF /* Theme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +361,7 @@
 				CC15C9042A110898001FBFAF /* Species.swift in Sources */,
 				CC15C9072A110CFD001FBFAF /* SpeciesService.swift in Sources */,
 				CC15C9022A110571001FBFAF /* EvolutionChain.swift in Sources */,
+				CC15C9312A12C688001FBFAF /* Theme.swift in Sources */,
 				CC15C91D2A112E49001FBFAF /* SpeciesAdapter.swift in Sources */,
 				CC15C9222A1255EE001FBFAF /* String+Linter.swift in Sources */,
 			);

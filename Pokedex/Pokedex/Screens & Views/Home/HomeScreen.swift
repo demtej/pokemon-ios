@@ -20,7 +20,7 @@ struct HomeScreen: View, ViewControllable {
                         Text(pokeSpecies.name.capitalizedFirstLetter())
                     }.onTapGesture {
                         viewModel.tapSpecies(pokeSpecies)
-                    }.listRowBackground(Color.purple.opacity(0.2))
+                    }.listRowBackground(Color.lightBackground)
                 }
 
 
@@ -43,7 +43,7 @@ struct HomeScreen: View, ViewControllable {
                                         await viewModel.fetchPokemons()
                                     }
                                 }
-                                .listRowBackground(Color.purple.opacity(0.2))
+                                .listRowBackground(Color.ultraLightBackground)
                         }
                     }
                 }

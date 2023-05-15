@@ -15,14 +15,14 @@ struct ErrorView: View {
         VStack {
             Text("Error: \(error.localizedDescription)")
                 .font(.headline)
-                .foregroundColor(.red)
+                .foregroundColor(Color.errorColor)
                 .padding()
 
             Button(action: retryAction) {
                 Text("Retry")
                     .font(.headline)
                     .padding()
-                    .background(Color.purple)
+                    .background(Color.accentColor)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
