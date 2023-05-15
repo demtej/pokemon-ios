@@ -24,7 +24,6 @@ struct HomeScreen: View, ViewControllable {
 
             if !viewModel.isFullList {
                 ProgressView()
-                    .foregroundColor(.red)
                     .progressViewStyle(CircularProgressViewStyle())
                     .onAppear {
                         Task {

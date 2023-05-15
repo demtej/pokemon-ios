@@ -7,12 +7,23 @@
 
 import Foundation
 
-struct SpeciesAdapter {
+struct SpeciesAdapter: Identifiable {
 
     private let IMAGE_BASE_URL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{species_id}.png"
 
-    let name: String
-    let url: String
+    let species: Species
+
+    var name: String {
+        species.name
+    }
+    
+    var url: String {
+        species.url
+    }
+
+    var id: String {
+        species.id
+    }
 
     private var pokemonId: String {
         if let url = URL(string: url) {
@@ -27,7 +38,6 @@ struct SpeciesAdapter {
     }
 
     init(species: Species) {
-        self.name = species.name
-        self.url = species.url
+        self.species = species
     }
 }
