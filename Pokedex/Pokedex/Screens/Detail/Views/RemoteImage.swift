@@ -19,8 +19,9 @@ struct RemoteImageView: View {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-            case .failure(let error):
-                Text("Error: \(error.localizedDescription)")
+            case .failure( _):
+                Image(systemName: "photo.circle")
+                    .resizable()
             @unknown default:
                 fatalError()
             }

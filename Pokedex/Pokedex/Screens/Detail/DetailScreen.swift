@@ -12,16 +12,21 @@ struct DetailScreen: View, ViewControllable {
     @ObservedObject var viewModel: DetailViewModel
 
     var body: some View {
-        VStack {
-            RemoteImageView(imageUrl: viewModel.imageUrl)
-                .fixedSize()
-            Spacer()
-            HStack {
-                ForEach(viewModel.speciesInChain) { species in
-                    RemoteImageView(imageUrl: species.imageUrlString)
-                        .fixedSize()
+        NavigationView {
+            VStack {
+                RemoteImageView(imageUrl: viewModel.imageUrl)
+                    .frame(width: 100, height: 100)
+                    .fixedSize()
+                Spacer()
+                HStack {
+                    ForEach(viewModel.speciesInChain) { species in
+                        RemoteImageView(imageUrl: species.imageUrlString)
+                            .frame(width: 100, height: 100)
+                            .fixedSize()
+                    }
                 }
             }
+            .navigationTitle(viewModel.species.name.capitalizedFirstLetter())
         }
         .onAppear {
             Task {

@@ -12,27 +12,33 @@ struct HomeScreen: View, ViewControllable {
     @ObservedObject var viewModel: HomeViewModel
 
     var body: some View {
-        List {
-            ForEach(viewModel.pokemons) { pokeSpecies in
-                HStack {
-                    Text(pokeSpecies.name)
-                }.onTapGesture {
-                    viewModel.tapSpecies(pokeSpecies)
+        NavigationView {
+            List {
+                ForEach(viewModel.pokemons) { pokeSpecies in
+                    HStack {
+                        Text(pokeSpecies.name.capitalizedFirstLetter())
+                    }.onTapGesture {
+                        viewModel.tapSpecies(pokeSpecies)
+                    }
                 }
 
-            }
-
-            if !viewModel.isFullList {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .onAppear {
-                        Task {
-                            await viewModel.fetchPokemons()
-                        }
+                if !viewModel.isFullList {
+                    Section {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .listRowInsets(EdgeInsets())
+                            .background(Color.clear)
+                            .onAppear {
+                                Task {
+                                    await viewModel.fetchPokemons()
+                                }
+                            }
                     }
+                }
             }
+            .padding(.bottom)
+            .navigationTitle("POKEDEX")
         }
-        .navigationTitle("POKEDEX")
-
     }
 }

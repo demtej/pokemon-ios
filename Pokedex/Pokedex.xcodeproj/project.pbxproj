@@ -26,6 +26,7 @@
 		CC15C91A2A112AD7001FBFAF /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9192A112AD7001FBFAF /* RemoteImage.swift */; };
 		CC15C91D2A112E49001FBFAF /* SpeciesAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C91C2A112E49001FBFAF /* SpeciesAdapter.swift */; };
 		CC15C91F2A1183C6001FBFAF /* ChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C91E2A1183C6001FBFAF /* ChainService.swift */; };
+		CC15C9222A1255EE001FBFAF /* String+Linter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15C9212A1255EE001FBFAF /* String+Linter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		CC15C9192A112AD7001FBFAF /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		CC15C91C2A112E49001FBFAF /* SpeciesAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesAdapter.swift; sourceTree = "<group>"; };
 		CC15C91E2A1183C6001FBFAF /* ChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainService.swift; sourceTree = "<group>"; };
+		CC15C9212A1255EE001FBFAF /* String+Linter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Linter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		CC15C8E82A10F8DC001FBFAF /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				CC15C9202A1255DE001FBFAF /* Helpers */,
 				CC15C8EA2A10F8F5001FBFAF /* UIKit + SwiftUI */,
 			);
 			path = Architecture;
@@ -203,6 +206,14 @@
 				CC15C91C2A112E49001FBFAF /* SpeciesAdapter.swift */,
 			);
 			path = ModelAdapters;
+			sourceTree = "<group>";
+		};
+		CC15C9202A1255DE001FBFAF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CC15C9212A1255EE001FBFAF /* String+Linter.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 				CC15C9072A110CFD001FBFAF /* SpeciesService.swift in Sources */,
 				CC15C9022A110571001FBFAF /* EvolutionChain.swift in Sources */,
 				CC15C91D2A112E49001FBFAF /* SpeciesAdapter.swift in Sources */,
+				CC15C9222A1255EE001FBFAF /* String+Linter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

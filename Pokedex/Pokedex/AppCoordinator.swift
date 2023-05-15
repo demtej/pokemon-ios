@@ -14,6 +14,7 @@ final class AppCoordinator {
 
     func start() -> UIViewController {
         let homeViewController = HomeScreen(viewModel: HomeViewModel(appCoordinator: self)).viewController()
+        homeViewController.navigationItem.backButtonTitle = ""
         baseNavController.pushViewController(homeViewController, animated: false)
         return baseNavController
     }
