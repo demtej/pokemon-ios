@@ -7,8 +7,11 @@
 
 import Foundation
 
+protocol ChainDataSource {
+    func getEvolutionChain(species: Species) async throws -> EvolutionChain
+}
 
-final class ChainService {
+final class ChainService: ChainDataSource {
 
     // MARK: Public Functions
     func getEvolutionChain(species: Species) async throws -> EvolutionChain {

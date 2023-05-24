@@ -11,7 +11,7 @@ final class DetailViewModel: ObservableObject {
 
     // MARK: Private Properties
     private let appCoordinator: AppCoordinator
-    private let chainService: ChainService
+    private let chainDataSource: ChainDataSource
 
     // MARK: Published Properties
     @Published var species: SpeciesAdapter
@@ -24,10 +24,10 @@ final class DetailViewModel: ObservableObject {
     }
 
     // MARK: Init
-    init(species: Species,appCoordinator: AppCoordinator, chainService: ChainService = ChainService()) {
+    init(species: Species,appCoordinator: AppCoordinator, chainDataSource: ChainDataSource) {
         self.species = SpeciesAdapter(species: species)
         self.appCoordinator = appCoordinator
-        self.chainService = chainService
+        self.chainDataSource = chainDataSource
     }
 
 
@@ -50,7 +50,7 @@ final class DetailViewModel: ObservableObject {
     func fetchEvolutionChain() async {
         do {
             self.error = nil
-            let chain = try await chainService.getEvolutionChain(species: self.species.species)
+            let chain = try await chainDataSource.getEvolutionChain(species: self.species.species)
             await MainActor.run {
                 self.chain = chain.chain
             }
