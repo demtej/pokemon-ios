@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class SpeciesService {
+protocol SpeciesDataSource {
+    func getSpecies(whenPreviousIs prevResponse: PokeAPIResponse?) async throws -> PokeAPIResponse?
+}
+
+final class SpeciesService: SpeciesDataSource {
 
     private static let MAX_RESULTS = 20
     private static let URI = "pokemon-species?limit={max_result}"

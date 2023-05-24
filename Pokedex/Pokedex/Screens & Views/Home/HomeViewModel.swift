@@ -12,7 +12,7 @@ final class HomeViewModel: ObservableObject {
 
     // MARK: Private Properties
     private var lastResponse: PokeAPIResponse? = nil
-    private let service: SpeciesService
+    private let speciesDataSource: SpeciesDataSource
     private let appCoordinator: AppCoordinator
 
     // MARK: Published Properties
@@ -25,9 +25,9 @@ final class HomeViewModel: ObservableObject {
     }
 
     // MARK: Init
-    init(appCoordinator: AppCoordinator, service: SpeciesService = SpeciesService()) {
+    init(appCoordinator: AppCoordinator, speciesDataSource: SpeciesDataSource) {
         self.appCoordinator = appCoordinator
-        self.service = service
+        self.speciesDataSource = speciesDataSource
     }
 
     // MARK: Public Properties & Methods
@@ -42,7 +42,7 @@ final class HomeViewModel: ObservableObject {
     func fetchPokemons() async {
         do {
             self.error = nil
-            lastResponse = try await service.getSpecies(whenPreviousIs: lastResponse)
+            lastResponse = try await speciesDataSource.getSpecies(whenPreviousIs: lastResponse)
             await MainActor.run {
                 pokemons.append(contentsOf: lastResponse?.results ?? [])
             }
